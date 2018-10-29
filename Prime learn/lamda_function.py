@@ -5,7 +5,7 @@ def lambda_handler(event, context):
         return onIntent(event['request'], event['session'])
     elif event['request']['type'] == "SessionEndedRequest" :
         return onSessionEnd(event['request'], event['session'])
-
+#this intent will invoke on the launch of skill
 def onLaunch(launchRequest, session):
     return welcomeuser()
 
@@ -85,6 +85,7 @@ def buildResponse(sessionAttr , speechlet):
 
 
 prime = [ "There is no largest prime number." ,
+          "Smallest prime number is 2",
           "The sum of the interior angles of a triangle is 180 degrees" ,
           "There is a largest prime number in the integers modulo n",
           "The Fibonacci sequence is encoded in the number 1/89" ,
